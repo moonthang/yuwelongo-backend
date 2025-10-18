@@ -1,0 +1,81 @@
+package logica;
+
+import jakarta.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "categorias")
+public class Categoria {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_categoria")
+    private int idCategoria;
+
+    private String nombre;
+    private String imagenUrl;
+    private String descripcion;
+    private String estado = "Activa";
+
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+    private List<Palabra> palabras;
+
+    public Categoria() {
+    }
+
+    public Categoria(int idCategoria, String nombre, String imagenUrl, String descripcion, List<Palabra> palabras) {
+        this.idCategoria = idCategoria;
+        this.nombre = nombre;
+        this.imagenUrl = imagenUrl;
+        this.descripcion = descripcion;
+        this.palabras = palabras;
+    }
+
+    public int getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public List<Palabra> getPalabras() {
+        return palabras;
+    }
+
+    public void setPalabras(List<Palabra> palabras) {
+        this.palabras = palabras;
+    }      
+}
