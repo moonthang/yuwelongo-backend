@@ -16,10 +16,10 @@ public class Palabra {
     private String palabraNasa;
 
     private String traduccion;
-    private String fraseEjemplo;
-    private String imagenUrl;
-    private String audioUrl;
-    private String fechaCreacion;
+    private String frase_ejemplo;
+    private String imagen_url;
+    private String audio_url;
+    private String fecha_creacion;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria")
@@ -31,14 +31,14 @@ public class Palabra {
     public Palabra() {
     }
 
-    public Palabra(int idPalabra, String palabraNasa, String traduccion, String fraseEjemplo, String imagenUrl, String audioUrl, String fechaCreacion, Categoria categoria, List<PreguntaJuego> preguntas) {
+    public Palabra(int idPalabra, String palabraNasa, String traduccion, String frase_ejemplo, String imagen_url, String audio_url, String fecha_creacion, Categoria categoria, List<PreguntaJuego> preguntas) {
         this.idPalabra = idPalabra;
         this.palabraNasa = palabraNasa;
         this.traduccion = traduccion;
-        this.fraseEjemplo = fraseEjemplo;
-        this.imagenUrl = imagenUrl;
-        this.audioUrl = audioUrl;
-        this.fechaCreacion = fechaCreacion;
+        this.frase_ejemplo = frase_ejemplo;
+        this.imagen_url = imagen_url;
+        this.audio_url = audio_url;
+        this.fecha_creacion = fecha_creacion;
         this.categoria = categoria;
         this.preguntas = preguntas;
     }
@@ -68,35 +68,35 @@ public class Palabra {
     }
 
     public String getFraseEjemplo() {
-        return fraseEjemplo;
+        return frase_ejemplo;
     }
 
-    public void setFraseEjemplo(String fraseEjemplo) {
-        this.fraseEjemplo = fraseEjemplo;
+    public void setFraseEjemplo(String frase_ejemplo) {
+        this.frase_ejemplo = frase_ejemplo;
     }
 
     public String getImagenUrl() {
-        return imagenUrl;
+        return imagen_url;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setImagenUrl(String imagen_url) {
+        this.imagen_url = imagen_url;
     }
 
     public String getAudioUrl() {
-        return audioUrl;
+        return audio_url;
     }
 
-    public void setAudioUrl(String audioUrl) {
-        this.audioUrl = audioUrl;
+    public void setAudioUrl(String audio_url) {
+        this.audio_url = audio_url;
     }
 
     public String getFechaCreacion() {
-        return fechaCreacion;
+        return fecha_creacion;
     }
 
-    public void setFechaCreacion(String fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
+    public void setFechaCreacion(String fecha_creacion) {
+        this.fecha_creacion = fecha_creacion;
     }
 
     public Categoria getCategoria() {

@@ -12,14 +12,14 @@ public class PreguntaJuego {
     private int idPregunta;
     
     @Column(name = "pregunta_texto")
-    private String preguntaTexto;
+    private String pregunta_texto;
     private String opcion1;
     private String opcion2;
     private String opcion3;
     private String opcion4;
-    private String respuestaCoreccta;
-    private int xpValor;
-    private String imagenUrl;
+    private String respuesta_correcta;
+    private int xp_valor;
+    private String imagen_url;
     
     @ManyToOne
     @JoinColumn(name = "id_palabra")
@@ -32,16 +32,16 @@ public class PreguntaJuego {
     public PreguntaJuego() {
     }
 
-    public PreguntaJuego(int idPregunta, String preguntaTexto, String opcion1, String opcion2, String opcion3, String opcion4, String respuestaCoreccta, int xpValor, String imagenUrl, Palabra palabra, NivelJuego nivel) {
+    public PreguntaJuego(int idPregunta, String pregunta_texto, String opcion1, String opcion2, String opcion3, String opcion4, String respuesta_correcta, int xp_valor, String imagen_url, Palabra palabra, NivelJuego nivel) {
         this.idPregunta = idPregunta;
-        this.preguntaTexto = preguntaTexto;
+        this.pregunta_texto = pregunta_texto;
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
         this.opcion4 = opcion4;
-        this.respuestaCoreccta = respuestaCoreccta;
-        this.xpValor = xpValor;
-        this.imagenUrl = imagenUrl;
+        this.respuesta_correcta = respuesta_correcta;
+        this.xp_valor = xp_valor;
+        this.imagen_url = imagen_url;
         this.palabra = palabra;
         this.nivel = nivel;
     }
@@ -55,11 +55,11 @@ public class PreguntaJuego {
     }
 
     public String getPreguntaTexto() {
-        return preguntaTexto;
+        return pregunta_texto;
     }
 
-    public void setPreguntaTexto(String preguntaTexto) {
-        this.preguntaTexto = preguntaTexto;
+    public void setPreguntaTexto(String pregunta_texto) {
+        this.pregunta_texto = pregunta_texto;
     }
 
     public String getOpcion1() {
@@ -95,27 +95,27 @@ public class PreguntaJuego {
     }
 
     public String getRespuestaCoreccta() {
-        return respuestaCoreccta;
+        return respuesta_correcta;
     }
 
-    public void setRespuestaCoreccta(String respuestaCoreccta) {
-        this.respuestaCoreccta = respuestaCoreccta;
+    public void setRespuestaCoreccta(String respuesta_correcta	) {
+        this.respuesta_correcta	 = respuesta_correcta;
     }
 
     public int getXpValor() {
-        return xpValor;
+        return xp_valor;
     }
 
     public void setXpValor(int xpValor) {
-        this.xpValor = xpValor;
+        this.xp_valor = xp_valor;
     }
 
     public String getImagenUrl() {
-        return imagenUrl;
+        return imagen_url;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setImagenUrl(String imagen_url) {
+        this.imagen_url = imagen_url;
     }
 
     public Palabra getPalabra() {

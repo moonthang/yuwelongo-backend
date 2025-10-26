@@ -13,7 +13,7 @@ public class Categoria {
     private int idCategoria;
 
     private String nombre;
-    private String imagenUrl;
+    private String imagen_url;
     private String descripcion;
     private String estado = "Activa";
 
@@ -23,10 +23,10 @@ public class Categoria {
     public Categoria() {
     }
 
-    public Categoria(int idCategoria, String nombre, String imagenUrl, String descripcion, List<Palabra> palabras) {
+    public Categoria(int idCategoria, String nombre, String imagen_url, String descripcion, List<Palabra> palabras) {
         this.idCategoria = idCategoria;
         this.nombre = nombre;
-        this.imagenUrl = imagenUrl;
+        this.imagen_url = imagen_url;
         this.descripcion = descripcion;
         this.palabras = palabras;
     }
@@ -48,11 +48,11 @@ public class Categoria {
     }
 
     public String getImagenUrl() {
-        return imagenUrl;
+        return imagen_url;
     }
 
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
+    public void setImagenUrl(String imagen_url) {
+        this.imagen_url = imagen_url;
     }
 
     public String getDescripcion() {

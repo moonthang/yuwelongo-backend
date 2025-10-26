@@ -11,8 +11,8 @@ public class Juego {
     @Column(name = "id_juego")
     private int idJuego;
     private int puntaje;
-    private String fechaJuego;
-    private int preguntasCorrectas;
+    private String fecha_juego;
+    private int preguntas_correctas;
     private int totalPreguntas;
     
     @ManyToOne
@@ -26,11 +26,11 @@ public class Juego {
     public Juego() {
     }
 
-    public Juego(int idJuego, int puntaje, String fechaJuego, int preguntasCorrectas, int totalPreguntas, Usuario usuario, NivelJuego nivel) {
+    public Juego(int idJuego, int puntaje, String fecha_juego, int preguntas_correctas, int totalPreguntas, Usuario usuario, NivelJuego nivel) {
         this.idJuego = idJuego;
         this.puntaje = puntaje;
-        this.fechaJuego = fechaJuego;
-        this.preguntasCorrectas = preguntasCorrectas;
+        this.fecha_juego = fecha_juego;
+        this.preguntas_correctas = preguntas_correctas;
         this.totalPreguntas = totalPreguntas;
         this.usuario = usuario;
         this.nivel = nivel;
@@ -53,19 +53,19 @@ public class Juego {
     }
 
     public String getFechaJuego() {
-        return fechaJuego;
+        return fecha_juego;
     }
 
-    public void setFechaJuego(String fechaJuego) {
-        this.fechaJuego = fechaJuego;
+    public void setFechaJuego(String fecha_juego) {
+        this.fecha_juego = fecha_juego;
     }
 
     public int getPreguntasCorrectas() {
-        return preguntasCorrectas;
+        return preguntas_correctas;
     }
 
-    public void setPreguntasCorrectas(int preguntasCorrectas) {
-        this.preguntasCorrectas = preguntasCorrectas;
+    public void setPreguntasCorrectas(int preguntas_correctas) {
+        this.preguntas_correctas = preguntas_correctas;
     }
 
     public int getTotalPreguntas() {

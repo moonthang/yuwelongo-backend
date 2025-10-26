@@ -3,14 +3,14 @@ package logica;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "favorito")
+@Table(name = "favoritos")
 public class Favorito {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_favorito")
     private int idFavorito;
-    private String fechaGuardado;
+    private String fecha_guardado;
     
     @ManyToOne
     @JoinColumn(name = "id_usuario")
@@ -23,9 +23,9 @@ public class Favorito {
     public Favorito() {
     }
 
-    public Favorito(int idFavorito, String fechaGuardado, Usuario usuario, Palabra palabra) {
+    public Favorito(int idFavorito, String fecha_guardado, Usuario usuario, Palabra palabra) {
         this.idFavorito = idFavorito;
-        this.fechaGuardado = fechaGuardado;
+        this.fecha_guardado = fecha_guardado;
         this.usuario = usuario;
         this.palabra = palabra;
     }
@@ -39,11 +39,11 @@ public class Favorito {
     }
 
     public String getFechaGuardado() {
-        return fechaGuardado;
+        return fecha_guardado;
     }
 
-    public void setFechaGuardado(String fechaGuardado) {
-        this.fechaGuardado = fechaGuardado;
+    public void setFechaGuardado(String fecha_guardado) {
+        this.fecha_guardado = fecha_guardado;
     }
 
     public Usuario getUsuario() {
