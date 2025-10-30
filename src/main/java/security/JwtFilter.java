@@ -27,6 +27,7 @@ public class JwtFilter implements Filter {
 
         if ("OPTIONS".equalsIgnoreCase(req.getMethod()) ||
             path.endsWith("/api/login") ||
+            (path.endsWith("/api/categorias") && "GET".equalsIgnoreCase(req.getMethod())) ||
             (path.endsWith("/api/usuarios") && "POST".equalsIgnoreCase(req.getMethod()))) {
             chain.doFilter(request, response);
             return;
