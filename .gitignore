@@ -1,0 +1,29 @@
+# Archivos de Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+# Log files
+*.log
+# Maven
+/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+# Gradle
+.gradle/
+/build/
+# Eclipse
+.classpath
+.project
+.settings/
+# IntelliJ IDEA
+.idea/
+# NetBeans
+nbproject/private/
+# Sistema Operativo
+.DS_Store
+Thumbs.db
