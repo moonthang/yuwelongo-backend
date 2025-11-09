@@ -32,8 +32,9 @@ public class CategoriaResource {
     }
 
     @PUT
-    public Response actualizarCategoria(Categoria categoria) {
-        Categoria existente = categoriaService.buscarPorId(categoria.getIdCategoria());
+    @Path("/{id}")
+    public Response actualizarCategoria(@PathParam("id") int id, Categoria categoria) {
+        Categoria existente = categoriaService.buscarPorId(id);
         if (existente == null) {
             return Response.status(Response.Status.NOT_FOUND)
                     .entity("{\"error\":\"Categoría no encontrada\"}")

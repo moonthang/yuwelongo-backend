@@ -45,8 +45,9 @@ public class PalabraResource {
     }
 
     @PUT
-    public Response actualizarPalabra(Palabra palabra, @QueryParam("idCategoria") int idCategoria) {
-        Palabra existente = palabraService.buscarPorId(palabra.getIdPalabra());
+    @Path("/{id}")
+    public Response actualizarPalabra(@PathParam("id") int id, Palabra palabra, @QueryParam("idCategoria") int idCategoria) {
+        Palabra existente = palabraService.buscarPorId(id);
         if (existente == null) {
             return Response.status(Response.Status.NOT_FOUND)
                     .entity("{\"error\":\"Palabra no encontrada\"}")
