@@ -13,7 +13,7 @@ public class Juego {
     private int puntaje;
     private String fecha_juego;
     private int preguntas_correctas;
-    private int totalPreguntas;
+    private int total_Preguntas;
     
     @ManyToOne
     @JoinColumn(name = "id_usuario")
@@ -26,12 +26,12 @@ public class Juego {
     public Juego() {
     }
 
-    public Juego(int idJuego, int puntaje, String fecha_juego, int preguntas_correctas, int totalPreguntas, Usuario usuario, NivelJuego nivel) {
+    public Juego(int idJuego, int puntaje, String fecha_juego, int preguntas_correctas, int total_Preguntas, Usuario usuario, NivelJuego nivel) {
         this.idJuego = idJuego;
         this.puntaje = puntaje;
         this.fecha_juego = fecha_juego;
         this.preguntas_correctas = preguntas_correctas;
-        this.totalPreguntas = totalPreguntas;
+        this.total_Preguntas = total_Preguntas;
         this.usuario = usuario;
         this.nivel = nivel;
     }
@@ -69,11 +69,11 @@ public class Juego {
     }
 
     public int getTotalPreguntas() {
-        return totalPreguntas;
+        return total_Preguntas;
     }
 
     public void setTotalPreguntas(int totalPreguntas) {
-        this.totalPreguntas = totalPreguntas;
+        this.total_Preguntas = totalPreguntas;
     }
 
     public Usuario getUsuario() {
