@@ -81,11 +81,15 @@ public class JuegoResource {
 
     @GET
     @Path("/ranking")
-    public List<Juego> obtenerRankingGlobal(@QueryParam("limite") @DefaultValue("10") int limite) {
+    public List<Object[]> obtenerRankingGlobal(@QueryParam("idPartida") String idPartida, @QueryParam("limite") @DefaultValue("10") int limite) {
         try {
-            return juegoService.obtenerRankingGlobal(limite);
+            if (idPartida != null && !idPartida.isEmpty()) {
+                return juegoService.obtenerRankingPorPartida(idPartida);
+            } else {
+                return juegoService.obtenerRankingGlobal(limite);
+            }
         } catch (Exception e) {
-            throw new WebApplicationException("Error al obtener el ranking global: " + e.getMessage());
+            throw new WebApplicationException("Error al obtener el ranking: " + e.getMessage());
         }
     }
 }
